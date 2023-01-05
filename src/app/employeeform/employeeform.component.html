@@ -1,0 +1,38 @@
+<div class="container">
+    <h3 class="text-center">Employee Form</h3>
+    <form [formGroup]="employeeForm" (ngSubmit)="submitEmpData()">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="fname">First Name</label>
+                <input class="form-control" type="text" id="fname" formControlName="fname" required>
+            </div>
+            <div class="col-md-6">
+                <label for="lname">Last Name</label>
+                <input class="form-control" type="text" id="lname" formControlName="lname" required>
+            </div>
+            <div class="col-md-6">
+                <label for="emailId">Email Id</label>
+                <input class="form-control" type="text" id="emailId" formControlName="emailId" required>
+            </div>
+            <div class="col-md-6">
+                <label for="dob">Date Of Birth</label>
+                <input class="form-control" type="date" id="dob" formControlName="dob" required>
+            </div>
+            <div class="col-md-6">
+                <label for="dept">Department</label>
+                <select class="form-control" name="dept" id="dept">
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                    <option value="FINANCE">FINANCE</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mt-4 text-right">
+            <span><button type="button" class="btn btn-info mr-4" (click)="goBack()">Go Back</button></span>
+            <span><button type="submit" class="btn btn-success">Submit</button></span>
+        </div>
+    </form>
+
+
+</div>

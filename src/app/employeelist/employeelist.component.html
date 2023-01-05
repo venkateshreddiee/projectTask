@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <h1>Employees</h1>
+  <table class="table table-striped" width="100%">
+    <thead>
+      <tr>
+        <th>Profile</th>
+        <th>Name</th>
+        <th>Emp Id</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="mt-2" *ngFor="let employee of employeeArray;let i = index;">
+        <td><img class="img-icon" src="../../assets/profile-icons/icon-{{i}}.JPG" alt="Profile" width="40px" height="40px"></td>
+        <td>{{employee.fname}}&nbsp;{{employee.lname}}</td>
+        <td>{{employee.empId}}</td>
+        <td>{{employee.dob}}</td>
+        <td>{{employee.emailId}}</td>
+        <td>
+          <span (click)="editEmployee(employee.empId)" class="material-symbols-outlined">
+            edit
+          </span>
+          <span (click)="deleteEmployee(employee.empId)" class="material-symbols-outlined">
+            delete
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn btn-create" (click)="createEmployee()"><span class="material-symbols-outlined">
+      add
+    </span></button>
+</div>

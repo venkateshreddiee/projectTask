@@ -1,0 +1,12 @@
+.btn-create {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    border-color: cadetblue;
+}
+
+.img-icon {
+    border-radius: 50%;
+}
